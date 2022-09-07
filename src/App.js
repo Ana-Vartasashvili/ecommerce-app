@@ -1,9 +1,11 @@
+import MainHeader from './components/layout/MainHeader'
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
-  );
+    <>
+      <MainHeader />
+    </>
+  )
 }
 
-export default App;
+export default App
