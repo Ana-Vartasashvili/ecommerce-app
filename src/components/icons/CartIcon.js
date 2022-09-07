@@ -7,7 +7,6 @@ const CartIcon = () => {
       stroke="#fff2e6"
       width="24"
       height="24"
-      textAlign="center"
     >
       <path
         strokeLinecap="round"

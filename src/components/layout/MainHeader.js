@@ -1,13 +1,18 @@
 import CartIcon from '../icons/CartIcon'
-import SideBarIcon from '../icons/SideBarIcon'
+import SidebarIcon from '../icons/SidebarIcon'
 import classes from './MainHeader.module.css'
+import { useState } from 'react'
 
-const MainHeader = () => {
+const MainHeader = (props) => {
+  const showSidebarHandler = () => {
+    props.setShowSidebar(true)
+  }
+
   return (
     <header className={classes.header}>
       <nav>
-        <div className={classes.sideBarIcon}>
-          <SideBarIcon />
+        <div className={classes.SidebarIcon} onClick={showSidebarHandler}>
+          <SidebarIcon />
         </div>
         <div className={classes.shopAbout}>
           <p>Shop</p>
