@@ -1,12 +1,12 @@
 const CartIcon = () => {
   return (
     <svg
-      fill=""
+      fill="#e9f79a"
       viewBox="0 0 24 24"
-      strokeWidth="2"
-      stroke="#fff2e6"
-      width="24"
-      height="24"
+      strokeWidth="1.7"
+      stroke="#010101"
+      width="30"
+      height="30"
     >
       <path
         strokeLinecap="round"
