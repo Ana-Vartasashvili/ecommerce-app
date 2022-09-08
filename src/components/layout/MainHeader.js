@@ -1,11 +1,13 @@
 import CartIcon from '../icons/CartIcon'
 import SidebarIcon from '../icons/SidebarIcon'
 import classes from './MainHeader.module.css'
-import { useState } from 'react'
+import { menubarActions } from '../../store/menubar-slice'
+import { useDispatch } from 'react-redux'
 
 const MainHeader = (props) => {
+  const dispatch = useDispatch()
   const showSidebarHandler = () => {
-    props.setShowSidebar(true)
+    dispatch(menubarActions.toggle())
   }
 
   return (
