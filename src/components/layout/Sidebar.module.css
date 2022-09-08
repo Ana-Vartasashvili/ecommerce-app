@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
-
 .sidebar {
   font-family: 'Dela Gothic One', sans-serif;
   font-size: 4rem;
@@ -11,6 +9,8 @@
   z-index: 99999999;
   color: white;
   position: fixed;
+  top: 0;
+  left: 0;
   animation: scale-up-hor-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -55,7 +55,7 @@
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(4px);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 1;
@@ -68,9 +68,13 @@
   }
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 35rem) {
   .sidebar {
     font-size: 3.5rem;
+  }
+
+  .sidebar ul {
+    gap: 1rem;
   }
 }
 

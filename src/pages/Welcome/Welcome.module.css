@@ -1,0 +1,35 @@
+.hero {
+  margin-top: 7rem;
+  width: 100vw;
+  padding: 0 6rem;
+  height: calc(100vh - 7rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7rem;
+}
+
+.text {
+  width: 60%;
+}
+
+.heroTitle {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 7.3rem;
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.titleWords {
+  background-color: #ff8500;
+}
+
+.heroSubtitle {
+  font-size: 3.7rem;
+}
+
+.hero img {
+  border: solid 2px #010101;
+  width: 58rem;
+}

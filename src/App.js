@@ -1,23 +1,20 @@
-import { useSelector } from 'react-redux'
-import { Route } from 'react-router-dom'
-import Sidebar from './components/layout/Sidebar'
+import { Route, Switch } from 'react-router-dom'
 import Header from './UI/Header'
+import Welcome from './pages/Welcome/Welcome'
 
 function App() {
-  const sidebarIsShown = useSelector((state) => state.isShown)
-
   return (
-    <>
-      {sidebarIsShown && <Sidebar />}
-
-      <Header>
-        <Route path="/welcome"></Route>
+    <Header>
+      <Switch>
+        <Route path="/welcome">
+          <Welcome />
+        </Route>
         <Route path="/shop"></Route>
         <Route path="/shop/:itemDetail"></Route>
         <Route path="/shop/cart"></Route>
         <Route path="/about"></Route>
-      </Header>
-    </>
+      </Switch>
+    </Header>
   )
 }
 

@@ -21,7 +21,9 @@ const MainHeader = (props) => {
           <p>About</p>
         </div>
         <p className={classes.logo}>LOGO</p>
-        <CartIcon />
+        <div>
+          <CartIcon />
+        </div>
       </nav>
     </header>
   )
