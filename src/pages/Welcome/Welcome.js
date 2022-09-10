@@ -1,5 +1,6 @@
 import classes from './Welcome.module.css'
 import heroImg from '../../images/hero-image.jpg'
+import { Link } from 'react-router-dom'
 
 const Welcome = () => {
   return (
@@ -13,7 +14,17 @@ const Welcome = () => {
           <p className={classes.heroSubtitle}>
             We'll never compromise on our high quality standards.
           </p>
+
+          <div className={classes.btns}>
+            <Link className={classes.shopBtn} to="/shop">
+              Shop All Products
+            </Link>
+            <Link className={classes.aboutBtn} to="/about">
+              Read About Us
+            </Link>
+          </div>
         </div>
+
         <img src={heroImg} alt="corn flakes with different flavours" />
       </div>
     </section>

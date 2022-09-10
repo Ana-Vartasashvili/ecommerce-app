@@ -2,6 +2,7 @@
   padding-top: 7rem;
   width: 100%;
   height: 100%;
+  margin-bottom: 7rem;
 }
 
 .heroContent {
@@ -34,6 +35,41 @@
 .heroSubtitle {
   font-size: 1.8vw;
   font-family: 'JetBrains Mono', sans-serif;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  gap: 4rem;
+}
+
+.btns a {
+  width: 50%;
+  padding: 1.2rem 0;
+  font-size: 1.4vw;
+  font-family: 'JetBrains Mono', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.btns a:hover,
+.btns a:active {
+  cursor: pointer;
+  background-color: #b8fa33;
+  color: #010101;
+}
+
+.aboutBtn {
+  border: solid 1.6px #010101;
+  color: #010101;
+}
+
+.shopBtn {
+  border: solid 1.6px #010101;
+  background-color: #8f1bfb;
+  color: #fff2e6;
 }
 
 .hero img {
@@ -53,17 +89,28 @@
   }
 
   .text {
-    width: 85%;
+    width: 100%;
   }
 
   .heroTitle {
-    font-size: 4.5vw;
+    font-size: 5vw;
     text-align: center;
+    width: 95%;
+    margin-bottom: 1.4rem;
   }
 
   .heroSubtitle {
-    font-size: 2.4vw;
-    text-align: center;
+    font-size: 3.8vw;
+  }
+
+  .btns {
+    display: grid;
+    row-gap: 1.6rem;
+  }
+
+  .btns a {
+    width: 100%;
+    font-size: 1.8rem;
   }
 }
 
@@ -76,7 +123,11 @@
     gap: 3rem;
   }
 
-  .heroTitle {
-    margin-bottom: 0.8rem;
+  .heroSubtitle {
+    margin-bottom: 2.6rem;
+  }
+
+  .btns a {
+    font-size: 1.35rem;
   }
 }
