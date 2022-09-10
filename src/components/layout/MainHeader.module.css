@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.header a {
+  text-decoration: none;
+}
+
 .shopAbout {
   display: flex;
   gap: 2.5rem;
@@ -35,7 +39,7 @@
 
 @media (max-width: 63rem) {
   .header {
-    padding: 1.4rem 2rem;
+    padding: 1.4rem 2.5rem;
   }
 
   .shopAbout {

@@ -3,6 +3,7 @@ import SidebarIcon from '../icons/SidebarIcon'
 import classes from './MainHeader.module.css'
 import { menubarActions } from '../../store/menubar-slice'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const MainHeader = (props) => {
   const dispatch = useDispatch()
@@ -20,7 +21,9 @@ const MainHeader = (props) => {
           <p>Shop</p>
           <p>About</p>
         </div>
-        <p className={classes.logo}>LOGO</p>
+        <p className={classes.logo}>
+          <Link to="/welcome">LOGO</Link>
+        </p>
         <div>
           <CartIcon />
         </div>

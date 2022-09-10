@@ -24,6 +24,7 @@
   text-align: start;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
+  position: relative;
 }
 
 .titleWords {

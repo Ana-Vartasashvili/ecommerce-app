@@ -14,9 +14,7 @@ const Welcome = () => {
             We'll never compromise on our high quality standards.
           </p>
         </div>
-        <div className={classes.heroImg}>
-          <img src={heroImg} alt="corn flakes with different flavours" />
-        </div>
+        <img src={heroImg} alt="corn flakes with different flavours" />
       </div>
     </section>
   )

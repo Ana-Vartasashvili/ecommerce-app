@@ -2,6 +2,7 @@ import classes from './Sidebar.module.css'
 import { useDispatch } from 'react-redux'
 import { menubarActions } from '../../store/menubar-slice'
 import CloseIcon from '../icons/CloseIcon'
+import { Link } from 'react-router-dom'
 
 const SideBar = (props) => {
   const dispatch = useDispatch()
@@ -17,9 +18,21 @@ const SideBar = (props) => {
             <CloseIcon />
           </div>
           <ul>
-            <li>HOME</li>
-            <li>SHOP</li>
-            <li>ABOUT</li>
+            <li>
+              <Link to="/welcome" onClick={closeSidebarHandler}>
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link to="/shop" onClick={closeSidebarHandler}>
+                SHOP
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={closeSidebarHandler}>
+                ABOUT
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

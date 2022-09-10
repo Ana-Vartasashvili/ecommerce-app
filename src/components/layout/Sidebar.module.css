@@ -31,6 +31,18 @@
   list-style: none;
 }
 
+.sidebar ul a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 2rem;
+  border: solid 2px #010101;
+}
+
+.sidebar ul a:hover,
+.sidebar ul a:active {
+  border: solid 2px #e9f79a;
+}
+
 .sidebar img {
   height: 50rem;
   position: absolute;
