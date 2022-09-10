@@ -36,7 +36,6 @@
   font-size: 1.8vw;
   font-family: 'JetBrains Mono', sans-serif;
   margin-bottom: 3.5rem;
-  text-align: center;
 }
 
 .btns {
@@ -57,18 +56,18 @@
 .btns a:hover,
 .btns a:active {
   cursor: pointer;
-  background-color: #b8fa33;
+  background-color: #d0ff71;
   color: #010101;
 }
 
 .aboutBtn {
-  border: solid 1.6px #010101;
+  border: solid 1.7px #010101;
   color: #010101;
 }
 
 .shopBtn {
-  border: solid 1.6px #010101;
-  background-color: #8f1bfb;
+  border: solid 1.7px #010101;
+  background-color: #982bfe;
   color: #fff2e6;
 }
 
@@ -101,6 +100,7 @@
 
   .heroSubtitle {
     font-size: 3.8vw;
+    text-align: center;
   }
 
   .btns {
@@ -110,7 +110,8 @@
 
   .btns a {
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+    padding: 1.6rem 0;
   }
 }
 
@@ -129,5 +130,6 @@
 
   .btns a {
     font-size: 1.35rem;
+    padding: 1.2rem;
   }
 }

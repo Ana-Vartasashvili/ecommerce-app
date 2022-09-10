@@ -1,24 +1,20 @@
-import { Redirect, Route, Switch } from 'react-router-dom'
-import Header from './UI/Header'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import Welcome from './pages/Welcome/Welcome'
+import Header from './UI/Header'
 
 function App() {
   return (
     <Header>
-      <Switch>
-        <Route path="/" exact>
-          <Redirect to="/welcome" />
-        </Route>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/welcome" />} />
 
-        <Route path="/welcome">
-          <Welcome />
-        </Route>
+        <Route path="/welcome" element={<Welcome />} />
 
         <Route path="/shop"></Route>
         <Route path="/shop/:itemDetail"></Route>
         <Route path="/shop/cart"></Route>
         <Route path="/about"></Route>
-      </Switch>
+      </Routes>
     </Header>
   )
 }
