@@ -1,7 +1,7 @@
-import ShopItem from '../../components/Shop/ShopItem'
+import ShopList from '../../components/Shop/ShopList'
 
 const Shop = () => {
-  return <ShopItem />
+  return <ShopList />
 }
 
 export default Shop

@@ -1,13 +1,16 @@
 import classes from './ShopItem.module.css'
 import productImg from '../../images/habanero-chilli.jpg'
 
-const ShopItem = () => {
+const ShopItem = (props) => {
   return (
     <div className={classes.productItem}>
-      <img src={productImg} alt="corn snack with chilli flavour" />
-      <h2>Habanero Chilli</h2>
-      <p>$10.00</p>
-      <button>Add to cart</button>
+      <img
+        src={'https://iili.io/PzG8s2.jpg'}
+        alt="corn snack with chilli flavour"
+      />
+      <h2>{props.title}</h2>
+      <p>{`$${props.price}`}</p>
+      <button className={classes.btn}>Add to cart</button>
     </div>
   )
 }

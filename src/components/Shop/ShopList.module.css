@@ -1,0 +1,9 @@
+.shopList {
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 5rem;
+  justify-items: center;
+}

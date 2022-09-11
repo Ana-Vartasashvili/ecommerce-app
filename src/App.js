@@ -22,6 +22,7 @@ function App() {
     fetchData()
   }, [dispatch])
 
+  console.log(productData)
   return (
     <Header>
       <Routes>

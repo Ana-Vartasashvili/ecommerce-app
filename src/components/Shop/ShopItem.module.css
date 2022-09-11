@@ -1,4 +1,43 @@
+.productItem {
+  font-family: 'IBM Plex Sans', sans-serif;
+  border: solid 1.7px #fff2e6;
+}
+
+.productItem:hover {
+  border: solid 1.5px #010101;
+  cursor: pointer;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.7rem;
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  opacity: 0%;
+  background-color: #ff8500;
+  color: #fff2e6;
+}
+
+.productItem:hover .btn {
+  opacity: 100%;
+}
+
 .productItem img {
-  width: 30rem;
+  width: 22vw;
   height: auto;
+  margin-bottom: 2rem;
+}
+
+.productItem h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.productItem p {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
 }
