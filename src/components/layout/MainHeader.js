@@ -17,13 +17,16 @@ const MainHeader = (props) => {
         <div className={classes.SidebarIcon} onClick={showSidebarHandler}>
           <SidebarIcon />
         </div>
+
         <div className={classes.shopAbout}>
-          <p>Shop</p>
-          <p>About</p>
+          <Link to="/shop">Shop</Link>
+          <Link to="/about">About</Link>
         </div>
-        <p className={classes.logo}>
-          <Link to="/welcome">LOGO</Link>
-        </p>
+
+        <Link to="/welcome" className={classes.logo}>
+          LOGO
+        </Link>
+
         <div>
           <CartIcon />
         </div>

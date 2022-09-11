@@ -1,0 +1,33 @@
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.scroll {
+  display: block;
+  width: 100%;
+  padding: 1.1rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #e9f79a;
+  margin-bottom: 4.5rem;
+}
+
+.scroll ul {
+  color: #010101;
+  font-size: 2.3rem;
+  display: flex;
+  gap: 3rem;
+  padding-left: 100%;
+  animation: scroll 9s infinite linear;
+}
+
+@media (max-width: 27rem) {
+  .scroll ul {
+    font-size: 4.6vw;
+  }
+}

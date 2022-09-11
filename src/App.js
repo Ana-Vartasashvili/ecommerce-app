@@ -1,5 +1,5 @@
 import { Route, Routes, Navigate } from 'react-router-dom'
-import Welcome from './pages/Welcome/Welcome'
+import Welcome from './pages/Welcome/Welcome/Welcome'
 import Header from './UI/Header'
 
 function App() {
