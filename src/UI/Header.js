@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import './Header.module.css'
 
 const Header = (props) => {
-  const sidebarIsShown = useSelector((state) => state.isShown)
+  const sidebarIsShown = useSelector((state) => state.menubar.isShown)
 
   return (
     <>
