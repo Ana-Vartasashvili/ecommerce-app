@@ -1,0 +1,43 @@
+.cart {
+  position: fixed;
+  width: 36vw;
+  height: 100vh;
+  padding: 3rem 4rem;
+  font-size: 1.5vw;
+  background-color: antiquewhite;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: solid 1.5px #010101;
+  position: relative;
+  margin-bottom: 4vw;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-right: 2.5rem;
+}
+
+.amount {
+  font-size: 1vw;
+  margin-right: 1rem;
+}
+
+.icon {
+  width: 3vw;
+  height: 3vw;
+}

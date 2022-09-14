@@ -5,6 +5,7 @@ import Welcome from './pages/Welcome/Welcome/Welcome'
 import Header from './UI/Header'
 import { useDispatch, useSelector } from 'react-redux'
 import { ProductsActions } from '../src/store/products-slice'
+import Cart from './components/Cart/Cart'
 
 function App() {
   const dispatch = useDispatch()
@@ -22,7 +23,6 @@ function App() {
     fetchData()
   }, [dispatch])
 
-  console.log(productData)
   return (
     <Header>
       <Routes>

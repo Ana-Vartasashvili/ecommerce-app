@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { menubarActions } from '../../store/menubar-slice'
 import CloseIcon from '../icons/CloseIcon'
 import { Link } from 'react-router-dom'
+import Overlay from '../../UI/Overlay'
 
 const SideBar = (props) => {
   const dispatch = useDispatch()
@@ -36,7 +37,7 @@ const SideBar = (props) => {
           </ul>
         </div>
       </div>
-      <div className={classes.overlayBlur}></div>
+      <Overlay />
     </>
   )
 }
