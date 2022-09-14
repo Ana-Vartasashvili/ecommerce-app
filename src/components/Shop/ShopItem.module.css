@@ -1,10 +1,11 @@
 .productItem {
   font-family: 'IBM Plex Sans', sans-serif;
-  border: solid 1.7px #fff2e6;
+  width: 23vw;
+  border: solid 1.5px #010101;
+  color: #010101;
 }
 
 .productItem:hover {
-  border: solid 1.5px #010101;
   cursor: pointer;
 }
 
@@ -15,24 +16,24 @@
   width: 100%;
   padding: 1.2rem;
   border: none;
-  opacity: 0%;
+  opacity: 100%;
   background-color: #ff8500;
   color: #fff2e6;
 }
 
 .productItem:hover .btn {
-  opacity: 100%;
+  cursor: pointer;
 }
 
 .productItem img {
-  width: 22vw;
+  width: 100%;
   height: auto;
   margin-bottom: 2rem;
 }
 
 .productItem h2 {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2rem;
   margin-bottom: 0.8rem;
 }
 
@@ -40,4 +41,46 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2.4rem;
+}
+
+@media (max-width: 63rem) {
+  .productItem {
+    font-size: 2rem;
+    width: 37vw;
+  }
+
+  .productItem h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 45rem) {
+  .productItem {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 31.25rem) {
+  .productItem {
+    width: 75vw;
+    margin-bottom: 1.2rem;
+  }
+
+  .productItem p {
+    margin-bottom: 1.7rem;
+  }
+}
+
+@media (max-width: 22.5rem) {
+  .productItem h2 {
+    font-size: 1.6rem;
+  }
+
+  .productItem p {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+  }
 }
