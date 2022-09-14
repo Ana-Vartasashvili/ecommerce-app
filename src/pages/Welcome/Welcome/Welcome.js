@@ -27,7 +27,9 @@ const Welcome = () => {
             </div>
           </div>
 
-          <img src={heroImg} alt="corn flakes with different flavours" />
+          <div className={classes.heroImg}>
+            <img src={heroImg} alt="corn flakes with different flavours" />
+          </div>
         </div>
       </section>
       <TextScroll />

@@ -71,10 +71,15 @@
   color: #fff2e6;
 }
 
-.hero img {
-  border: solid 1.6px #010101;
+.heroImg {
   width: 35vw;
-  height: auto;
+  height: 32.7vw;
+  border: solid 1.6px #010101;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 63rem) {
@@ -82,9 +87,9 @@
     flex-direction: column-reverse;
   }
 
-  .hero img {
+  .heroImg {
     width: 80vw;
-    height: auto;
+    height: 78.5vw;
   }
 
   .text {

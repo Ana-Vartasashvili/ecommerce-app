@@ -1,6 +1,7 @@
 .productItem {
   font-family: 'IBM Plex Sans', sans-serif;
   width: 23vw;
+  height: fit-content;
   border: solid 1.5px #010101;
   color: #010101;
 }
