@@ -37,6 +37,10 @@
   cursor: pointer;
 }
 
+.cartIcon {
+  cursor: pointer;
+}
+
 @media (max-width: 63rem) {
   .header {
     padding: 1.4rem 2.5rem;

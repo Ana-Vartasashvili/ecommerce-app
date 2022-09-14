@@ -2,8 +2,15 @@ import classes from './Cart.module.css'
 import Overlay from '../../UI/Overlay'
 import CloseIcon from '../icons/CloseIcon'
 import CartItem from './CartItem'
+import { useDispatch } from 'react-redux'
+import { cartActions } from '../../store/cart-slice'
 
 const Cart = () => {
+  const dispatch = useDispatch()
+  const cartCloseHandler = () => {
+    dispatch(cartActions.toggle())
+  }
+
   return (
     <>
       <div className={classes.cart}>
@@ -14,7 +21,7 @@ const Cart = () => {
             <p className={classes.price}>$260.99</p>
           </div>
 
-          <div className={classes.icon}>
+          <div className={classes.icon} onClick={cartCloseHandler}>
             <CloseIcon />
           </div>
         </div>

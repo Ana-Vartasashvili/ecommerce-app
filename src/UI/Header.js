@@ -6,11 +6,12 @@ import Cart from '../components/Cart/Cart'
 
 const Header = (props) => {
   const sidebarIsShown = useSelector((state) => state.menubar.isShown)
+  const cartIsShown = useSelector((state) => state.cart.isShown)
 
   return (
     <>
       {sidebarIsShown && <Sidebar />}
-      <Cart />
+      {cartIsShown && <Cart />}
       <MainHeader />
       <main>{props.children}</main>
     </>
