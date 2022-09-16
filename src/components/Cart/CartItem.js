@@ -6,20 +6,19 @@ const CartItem = () => {
   return (
     <div className={classes.cartItem}>
       <div className={classes.item}>
-        <div className={classes.productDescription}>
-          <img src={image} alt="corn flakes" />
-          <div className={classes.flexReverse}>
-            <p>Sea Salt</p>
-            <div className={classes.quantity}>
-              <span>QTY:</span>
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
-            </div>
+        <img src={image} alt="corn flakes" />
+
+        <div className={classes.quantityTitle}>
+          <p>Sea Salt</p>
+          <div className={classes.quantity}>
+            <span>QTY:</span>
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
           </div>
         </div>
 
-        <div className={classes.flexReverse}>
+        <div className={classes.priceRemove}>
           <p>$12.00</p>
           <button className={classes.removeBtn}>
             <div className={classes.removeIcon}>

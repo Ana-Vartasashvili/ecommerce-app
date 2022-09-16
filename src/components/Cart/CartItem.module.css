@@ -10,34 +10,18 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding-right: 2rem;
-}
-
-.productDescription {
-  width: 100%;
-  display: flex;
-  gap: 5rem;
-}
-
-.item p {
-  margin-top: 1.2rem;
+  padding-right: 1.2vw;
 }
 
 .cartItem img {
-  width: 26%;
+  width: 24%;
   height: 100%;
-}
-
-.quantity {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 1.2vw;
 }
 
 .quantity button {
   font-size: 2.5rem;
-  padding: 0.5rem;
+  height: auto;
+  padding: 0 0.5vw;
   border: none;
   background-color: antiquewhite;
 }
@@ -46,24 +30,33 @@
   cursor: pointer;
 }
 
+.quantityTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  gap: 2vw;
+  padding-bottom: 0.6vw;
+}
+
 .removeBtn {
   display: flex;
   align-items: center;
   background-color: antiquewhite;
   border: none;
   font-size: 1vw;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
+  gap: 0.2vw;
 }
 
 .removeIcon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.4vw;
+  height: 1.4vw;
 }
 
-.flexReverse {
+.priceRemove {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 1.2rem;
+  justify-content: end;
+  gap: 3vw;
+  margin-bottom: 0.8vw;
 }
