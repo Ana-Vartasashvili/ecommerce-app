@@ -2,10 +2,12 @@ import classes from './Cart.module.css'
 import Overlay from '../../UI/Overlay'
 import CloseIcon from '../icons/CloseIcon'
 import CartItem from './CartItem'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../../store/cart-slice'
 
 const Cart = () => {
+  const cartItems = useSelector((state) => state.products.cartItems)
+
   const dispatch = useDispatch()
   const cartCloseHandler = () => {
     dispatch(cartActions.toggle())
@@ -26,7 +28,15 @@ const Cart = () => {
           </div>
         </div>
 
-        <CartItem />
+        <div className={classes.cartItems}>
+          {cartItems.map((item) => (
+            <CartItem
+              title={item.title}
+              price={item.price}
+              image={item.image}
+            />
+          ))}
+        </div>
       </div>
 
       <Overlay />

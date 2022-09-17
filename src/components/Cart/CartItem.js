@@ -1,15 +1,14 @@
 import classes from './CartItem.module.css'
-import image from '../../images/habanero-chilli.jpg'
 import CloseIcon from '../icons/CloseIcon'
 
-const CartItem = () => {
+const CartItem = (props) => {
   return (
     <div className={classes.cartItem}>
       <div className={classes.item}>
-        <img src={image} alt="corn flakes" />
+        <img src={props.image} alt="corn flakes" />
 
-        <div className={classes.quantityTitle}>
-          <p>Sea Salt</p>
+        <div className={classes.titleQuantity}>
+          <p className={classes.title}>{props.title}</p>
           <div className={classes.quantity}>
             <span>QTY:</span>
             <button>-</button>
@@ -19,7 +18,7 @@ const CartItem = () => {
         </div>
 
         <div className={classes.priceRemove}>
-          <p>$12.00</p>
+          <p>{`$${props.price.toFixed(2)}`}</p>
           <button className={classes.removeBtn}>
             <div className={classes.removeIcon}>
               <CloseIcon />

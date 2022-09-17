@@ -13,7 +13,6 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(process.env.REACT_APP_API_BASE_URI)
-
         if (!response.ok) {
           throw new Error('Failed to load products.')
         }

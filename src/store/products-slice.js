@@ -1,11 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const initialState = { items: [], cartItems: [] }
+
 const ProductsSlice = createSlice({
   name: 'products',
-  initialState: [],
+  initialState,
   reducers: {
     addProductData(state, action) {
-      return (state = action.payload)
+      state.items = action.payload
+    },
+    addItemToCart(state, action) {
+      const existingItem = state.cartItems.find(
+        (item) => item.id === action.payload
+      )
+      const newItem = state.items.find((item) => item.id === action.payload)
+
+      if (!existingItem) {
+        state.cartItems.push(newItem)
+      }
     },
   },
 })

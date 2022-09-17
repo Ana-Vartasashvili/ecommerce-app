@@ -5,10 +5,6 @@
   color: #010101;
 }
 
-.productItem:hover {
-  cursor: pointer;
-}
-
 .btn {
   display: block;
   margin: 0 auto;
@@ -24,15 +20,16 @@
 
 .btn:hover {
   background-color: #f26805;
-}
-
-.productItem:hover .btn {
   cursor: pointer;
 }
 
 .itemImage {
   width: 23vw;
   height: 30vw;
+}
+
+.itemImage:hover {
+  cursor: pointer;
 }
 
 .productItem img {
@@ -60,7 +57,7 @@
 
   .itemImage {
     width: 37vw;
-    height: auto;
+    height: 45vw;
   }
 
   .productItem h2 {
@@ -71,7 +68,7 @@
 @media (max-width: 45rem) {
   .itemImage {
     width: 70vw;
-    height: auto;
+    height: 85npvw;
   }
 }
 

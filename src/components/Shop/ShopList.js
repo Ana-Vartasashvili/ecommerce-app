@@ -3,13 +3,14 @@ import ShopItem from './ShopItem'
 import classes from './ShopList.module.css'
 
 const ShopList = () => {
-  const productsList = useSelector((state) => state.products)
+  const productsList = useSelector((state) => state.products.items)
 
   return (
     <div className={classes.shopList}>
       {productsList.map((item) => (
         <ShopItem
           key={item.id}
+          id={item.id}
           image={item.image}
           price={item.price}
           title={item.title}
