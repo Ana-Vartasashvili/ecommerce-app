@@ -9,7 +9,7 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.products.cartItems)
 
   const dispatch = useDispatch()
-  const cartCloseHandler = () => {
+  const closeCartHandler = () => {
     dispatch(cartActions.toggle())
     console.log(cartItems)
   }
@@ -24,7 +24,7 @@ const Cart = () => {
             <p className={classes.price}>$260.99</p>
           </div>
 
-          <div className={classes.icon} onClick={cartCloseHandler}>
+          <div className={classes.icon} onClick={closeCartHandler}>
             <CloseIcon />
           </div>
         </div>
@@ -47,7 +47,9 @@ const Cart = () => {
         </div>
       </div>
 
-      <Overlay />
+      <div onClick={closeCartHandler}>
+        <Overlay />
+      </div>
     </>
   )
 }

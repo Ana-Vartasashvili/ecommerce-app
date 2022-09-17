@@ -1,6 +1,6 @@
 import classes from './CartItem.module.css'
 import CloseIcon from '../icons/CloseIcon'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { ProductsActions } from '../../store/products-slice'
 
 const CartItem = (props) => {
@@ -8,6 +8,14 @@ const CartItem = (props) => {
   const id = props.id
   const removeCartItemHandler = () => {
     dispatch(ProductsActions.removeItemFromCart(id))
+  }
+
+  const increaseQuantityHandler = () => {
+    dispatch(ProductsActions.increaseQuantity(id))
+  }
+
+  const decreaseQuantityHandler = () => {
+    dispatch(ProductsActions.decreaseQuantity(id))
   }
 
   return (
@@ -20,9 +28,9 @@ const CartItem = (props) => {
             <p className={classes.title}>{props.title}</p>
             <div className={classes.quantity}>
               <span>QTY:</span>
-              <button>-</button>
+              <button onClick={decreaseQuantityHandler}>-</button>
               <span>{props.quantity}</span>
-              <button>+</button>
+              <button onClick={increaseQuantityHandler}>+</button>
             </div>
           </div>
 

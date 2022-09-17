@@ -37,7 +37,10 @@ const SideBar = (props) => {
           </ul>
         </div>
       </div>
-      <Overlay />
+
+      <div onClick={closeSidebarHandler}>
+        <Overlay />
+      </div>
     </>
   )
 }
