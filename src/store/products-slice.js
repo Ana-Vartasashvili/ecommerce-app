@@ -17,6 +17,9 @@ const ProductsSlice = createSlice({
 
       if (!existingItem) {
         state.cartItems.push(newItem)
+        newItem.quantity = 1
+      } else {
+        existingItem.quantity++
       }
     },
   },

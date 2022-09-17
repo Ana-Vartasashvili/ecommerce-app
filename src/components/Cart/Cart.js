@@ -11,6 +11,7 @@ const Cart = () => {
   const dispatch = useDispatch()
   const cartCloseHandler = () => {
     dispatch(cartActions.toggle())
+    console.log(cartItems)
   }
 
   return (
@@ -28,9 +29,15 @@ const Cart = () => {
           </div>
         </div>
 
+        {cartItems.length === 0 && (
+          <p className={classes.placeHolder}>Your cart is empty.</p>
+        )}
+
         <div className={classes.cartItems}>
           {cartItems.map((item) => (
             <CartItem
+              key={item.id}
+              quantity={item.quantity}
               title={item.title}
               price={item.price}
               image={item.image}

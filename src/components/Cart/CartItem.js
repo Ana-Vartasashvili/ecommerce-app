@@ -13,7 +13,7 @@ const CartItem = (props) => {
             <div className={classes.quantity}>
               <span>QTY:</span>
               <button>-</button>
-              <span>1</span>
+              <span>{props.quantity}</span>
               <button>+</button>
             </div>
           </div>
