@@ -1,5 +1,4 @@
 import classes from './ShopItem.module.css'
-import { Link } from 'react-router-dom'
 import { ProductsActions } from '../../store/products-slice'
 import { useDispatch } from 'react-redux'
 
@@ -13,9 +12,7 @@ const ShopItem = (props) => {
   return (
     <div className={classes.productItem}>
       <div className={classes.itemImage}>
-        <Link to="/shop/ana">
-          <img src={props.image} alt="corn snack with chilli flavour" />
-        </Link>
+        <img src={props.image} alt="corn snack with chilli flavour" />
       </div>
       <h2>{props.title}</h2>
       <p>{`$${props.price.toFixed(2)}`}</p>

@@ -60,6 +60,10 @@
   gap: 0.2vw;
 }
 
+.removeBtn:hover {
+  cursor: pointer;
+}
+
 .removeIcon {
   width: 1.4vw;
   height: 1.4vw;

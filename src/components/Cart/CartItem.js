@@ -1,7 +1,15 @@
 import classes from './CartItem.module.css'
 import CloseIcon from '../icons/CloseIcon'
+import { useDispatch } from 'react-redux'
+import { ProductsActions } from '../../store/products-slice'
 
 const CartItem = (props) => {
+  const dispatch = useDispatch()
+  const id = props.id
+  const removeCartItemHandler = () => {
+    dispatch(ProductsActions.removeItemFromCart(id))
+  }
+
   return (
     <div className={classes.cartItem}>
       <div className={classes.item}>
@@ -20,7 +28,10 @@ const CartItem = (props) => {
 
           <div className={classes.priceRemove}>
             <p>{`$${props.price.toFixed(2)}`}</p>
-            <button className={classes.removeBtn}>
+            <button
+              className={classes.removeBtn}
+              onClick={removeCartItemHandler}
+            >
               <div className={classes.removeIcon}>
                 <CloseIcon />
               </div>
