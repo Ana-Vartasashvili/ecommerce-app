@@ -23,7 +23,12 @@
 .cartItem img {
   width: 20%;
   height: 100%;
-  margin-right: 2vw;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .quantity button {
@@ -59,6 +64,7 @@
   border: none;
   font-size: 1vw;
   gap: 0.2vw;
+  margin-bottom: 0.3rem;
 }
 
 .removeBtn:hover {
@@ -68,4 +74,84 @@
 .removeIcon {
   width: 1.4vw;
   height: 1.4vw;
+}
+
+@media (max-width: 75rem) {
+  .cartItem {
+    height: 10rem;
+    font-size: 1.5rem;
+  }
+
+  .cartItem img {
+    width: 29%;
+  }
+
+  .quantity button {
+    font-size: 1.8rem;
+  }
+
+  .removeBtn {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 50rem) {
+  .cartItem {
+    height: 23vw;
+    font-size: 2rem;
+  }
+
+  .text {
+    margin: 1.8vw 0;
+  }
+
+  .quantity {
+    font-size: 1.8rem;
+    gap: 2vw;
+  }
+
+  .quantity button {
+    font-size: 2rem;
+  }
+
+  .removeBtn {
+    font-size: 1.4rem;
+    gap: 0.4vw;
+  }
+
+  .removeIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 35rem) {
+  .cartItem {
+    height: 17vh;
+  }
+
+  .cartItem img {
+    width: 28%;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 28.12rem) {
+  .cartItem {
+    font-size: 3.7vw;
+    height: 30%;
+  }
+
+  .quantity {
+    font-size: 3.3vw;
+  }
+
+  .removeBtn {
+    font-size: 3.6vw;
+  }
+
+  .removeIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }

@@ -5,9 +5,9 @@
   padding: 3rem 4rem;
   font-size: 1.5vw;
   background-color: antiquewhite;
-  z-index: 99999;
   top: 0;
   right: 0;
+  z-index: 999;
   overflow: hidden;
   animation: scale-up-hor-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
@@ -27,7 +27,7 @@
 .text {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .title {
@@ -61,6 +61,68 @@
   flex-direction: column;
   gap: 2vw;
   overflow-y: scroll;
+}
+
+@media (max-width: 62.5rem) {
+  .cart {
+    width: 51vw;
+    font-size: 2rem;
+  }
+
+  .amount {
+    font-size: 1.3rem;
+  }
+
+  .icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+
+@media (max-width: 50rem) {
+  .cart {
+    width: 100vw;
+    font-size: 4.2vw;
+    padding: 4rem 2.5rem;
+  }
+
+  .headerContainer {
+    margin-bottom: 6.8vw;
+  }
+
+  .text {
+    width: 85%;
+    justify-content: space-between;
+  }
+
+  .amount {
+    font-size: 3vw;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .icon {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .cartItems {
+    gap: 4.5vw;
+    max-height: 90%;
+  }
+}
+
+@media (max-width: 28.12rem) {
+  .cart {
+    font-size: 1.6rem;
+  }
+
+  .icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
 }
 
 @keyframes scale-up-hor-right {
