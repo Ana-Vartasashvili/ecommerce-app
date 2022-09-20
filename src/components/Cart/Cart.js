@@ -4,14 +4,20 @@ import CloseIcon from '../icons/CloseIcon'
 import CartItem from './CartItem'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../../store/cart-slice'
+import { useEffect } from 'react'
+import { ProductsActions } from '../../store/products-slice'
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state.products.cartItems)
-
   const dispatch = useDispatch()
+  const cartItems = useSelector((state) => state.products.cartItems)
+  const cart = useSelector((state) => state.products)
+
+  useEffect(() => {
+    dispatch(ProductsActions.getTotals())
+  }, [cart, dispatch])
+
   const closeCartHandler = () => {
     dispatch(cartActions.toggle())
-    console.log(cartItems)
   }
 
   return (
@@ -20,8 +26,8 @@ const Cart = () => {
         <div className={classes.headerContainer}>
           <div className={classes.text}>
             <p className={classes.title}>Your Order</p>
-            <p className={classes.amount}>(7) items</p>
-            <p className={classes.price}>$260.99</p>
+            <p className={classes.amount}>({cart.totalQuantity}) items</p>
+            <p className={classes.price}>{`$${cart.totalPrice.toFixed(2)}`}</p>
           </div>
 
           <div className={classes.icon} onClick={closeCartHandler}>

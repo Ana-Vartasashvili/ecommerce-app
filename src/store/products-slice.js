@@ -1,6 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = { items: [], cartItems: [] }
+const initialState = {
+  items: [],
+  cartItems: [],
+  totalPrice: 0,
+  totalQuantity: 0,
+}
 
 const ProductsSlice = createSlice({
   name: 'products',
@@ -35,6 +40,7 @@ const ProductsSlice = createSlice({
         (item) => item.id === action.payload
       )
       existingItem.quantity++
+      state.totalAmount += existingItem.quantity * existingItem.totalPricece
     },
 
     decreaseQuantity(state, action) {
@@ -48,6 +54,26 @@ const ProductsSlice = createSlice({
           (item) => item.id !== existingItem.id
         )
       }
+    },
+
+    getTotals(state) {
+      const { totalAmount, totalQuantity } = state.cartItems.reduce(
+        (cartTotal, cartItem) => {
+          const { price, quantity } = cartItem
+          const itemTotal = price * quantity
+
+          cartTotal.totalAmount += itemTotal
+          cartTotal.totalQuantity += quantity
+
+          return cartTotal
+        },
+        {
+          totalAmount: 0,
+          totalQuantity: 0,
+        }
+      )
+      state.totalPrice = totalAmount
+      state.totalQuantity = totalQuantity
     },
   },
 })

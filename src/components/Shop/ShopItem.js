@@ -1,12 +1,14 @@
 import classes from './ShopItem.module.css'
 import { ProductsActions } from '../../store/products-slice'
 import { useDispatch } from 'react-redux'
+import { cartActions } from '../../store/cart-slice'
 
 const ShopItem = (props) => {
   const dispatch = useDispatch()
   const id = props.id
   const addItemToCartHandler = () => {
     dispatch(ProductsActions.addItemToCart(id))
+    dispatch(cartActions.toggle())
   }
 
   return (

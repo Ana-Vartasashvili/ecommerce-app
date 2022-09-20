@@ -1,11 +1,12 @@
 import classes from './CartItem.module.css'
 import CloseIcon from '../icons/CloseIcon'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { ProductsActions } from '../../store/products-slice'
 
 const CartItem = (props) => {
   const dispatch = useDispatch()
   const id = props.id
+
   const removeCartItemHandler = () => {
     dispatch(ProductsActions.removeItemFromCart(id))
   }
