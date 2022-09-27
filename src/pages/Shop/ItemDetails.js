@@ -7,23 +7,37 @@ const ItemDetails = (props) => {
 
   const items = useSelector((state) => state.products.items)
 
-  const currentItem = items.find((item) => item.id.toString() === id)
+  const currentItem = items
+    ? items.find((item) => item.id.toString() === id)
+    : []
 
   return (
     <>
-      <div className={classes.container}>
-        <div className={classes.image}>
-          <img src={currentItem.image} alt="Corn snack"></img>
-        </div>
+      {currentItem && (
+        <div className={classes.container}>
+          <div className={classes.image}>
+            <img src={currentItem.image} alt="Corn snack"></img>
+          </div>
 
-        <div className={classes.text}>
-          <h2 className={classes.title}>{currentItem.title}</h2>
-          <p className={classes.price}>{currentItem.price}</p>
-          <input type="number" min="0"></input>
-          <button>Add to cart</button>
-          <div className={classes.description}>{currentItem.description}</div>
+          <div className={classes.text}>
+            <h2 className={classes.title}>{currentItem.title}</h2>
+            <p className={classes.price}>{`$${currentItem.price.toFixed(
+              2
+            )}`}</p>
+
+            <div className={classes.flex}>
+              <div className={classes.quantity}>
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+              <button className={classes.addToCartBtn}>Add to cart</button>
+            </div>
+
+            <div className={classes.description}>{currentItem.description}</div>
+          </div>
         </div>
-      </div>
+      )}
     </>
   )
 }

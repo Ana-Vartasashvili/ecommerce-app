@@ -7,5 +7,52 @@
 }
 
 .container img {
-  width: 75%;
+  width: 80%;
+}
+
+.title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 3rem;
+  margin: 6rem 0 1.3rem 0;
+}
+
+.price {
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+}
+
+.quantity {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  border-bottom: solid 1px #010101;
+  border-top: solid 1px #010101;
+}
+
+.quantity button {
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.addToCartBtn {
+  background-color: #ff8500;
+  color: white;
+  width: 100%;
+  border: #010101 1px solid;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.addToCartBtn:hover {
+  background-color: #f26805;
+}
+
+.flex {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 5rem;
 }
