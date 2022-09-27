@@ -1,15 +1,26 @@
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import classes from './ItemDetails.module.css'
+import { useState } from 'react'
 
 const ItemDetails = (props) => {
   const { id } = useParams()
+
+  const [itemQuantity, setItemQuantity] = useState(1)
 
   const items = useSelector((state) => state.products.items)
 
   const currentItem = items
     ? items.find((item) => item.id.toString() === id)
     : []
+
+  const increaseQuantityHandler = () => {
+    setItemQuantity((prev) => prev + 1)
+  }
+
+  const decreaseQuantityHandler = () => {
+    itemQuantity > 1 && setItemQuantity((prev) => prev - 1)
+  }
 
   return (
     <>
@@ -27,9 +38,9 @@ const ItemDetails = (props) => {
 
             <div className={classes.flex}>
               <div className={classes.quantity}>
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
+                <button onClick={decreaseQuantityHandler}>-</button>
+                <span>{itemQuantity}</span>
+                <button onClick={increaseQuantityHandler}>+</button>
               </div>
               <button className={classes.addToCartBtn}>Add to cart</button>
             </div>

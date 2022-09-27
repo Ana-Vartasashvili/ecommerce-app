@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 7rem auto;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .container img {
