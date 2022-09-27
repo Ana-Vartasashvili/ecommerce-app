@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import menubarReducer from './menubar-slice'
 import productsReducer from './products-slice'
 import cartReducer from '../store/cart-slice'
+import menubarReducer from './menubar-slice'
 
 const Store = configureStore({
   reducer: {

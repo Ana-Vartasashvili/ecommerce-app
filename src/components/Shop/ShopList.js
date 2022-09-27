@@ -1,6 +1,6 @@
+import classes from './ShopList.module.css'
 import { useSelector } from 'react-redux'
 import ShopItem from './ShopItem'
-import classes from './ShopList.module.css'
 
 const ShopList = () => {
   const productsList = useSelector((state) => state.products.items)

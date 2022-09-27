@@ -1,7 +1,8 @@
-import classes from './ShopItem.module.css'
 import { ProductsActions } from '../../store/products-slice'
-import { useDispatch } from 'react-redux'
 import { cartActions } from '../../store/cart-slice'
+import classes from './ShopItem.module.css'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const ShopItem = (props) => {
   const dispatch = useDispatch()
@@ -14,7 +15,9 @@ const ShopItem = (props) => {
   return (
     <div className={classes.productItem}>
       <div className={classes.itemImage}>
-        <img src={props.image} alt="corn snack with chilli flavour" />
+        <Link to={`${id}`}>
+          <img src={props.image} alt="corn snack with chilli flavour" />
+        </Link>
       </div>
       <h2>{props.title}</h2>
       <p>{`$${props.price.toFixed(2)}`}</p>

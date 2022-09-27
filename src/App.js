@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
-import { Route, Routes, Navigate } from 'react-router-dom'
-import Shop from './pages/Shop/Shop'
-import Welcome from './pages/Welcome/Welcome/Welcome'
-import Header from './UI/Header'
-import { useDispatch } from 'react-redux'
 import { ProductsActions } from '../src/store/products-slice'
+import { Route, Routes, Navigate } from 'react-router-dom'
+import Welcome from './pages/Welcome/Welcome/Welcome'
+import { useDispatch } from 'react-redux'
+import Shop from './pages/Shop/Shop'
+import { useEffect } from 'react'
+import Header from './UI/Header'
+import ItemDetails from './pages/Shop/ItemDetails'
 
 function App() {
   const dispatch = useDispatch()
@@ -29,13 +30,11 @@ function App() {
     <Header>
       <Routes>
         <Route path="/" element={<Navigate replace to="/welcome" />} />
-
         <Route path="/welcome" element={<Welcome />} />
+        <Route path="/shop" element={<Shop />} />
 
-        <Route path="/shop" element={<Shop />}>
-          <Route path="/shop/:id"></Route>
-        </Route>
-        <Route path="/shop/cart"></Route>
+        <Route path="/shop/:id" element={<ItemDetails />}></Route>
+
         <Route path="/about"></Route>
       </Routes>
     </Header>

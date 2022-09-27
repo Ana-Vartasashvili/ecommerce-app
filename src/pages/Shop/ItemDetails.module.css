@@ -1,0 +1,11 @@
+.container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 7rem auto;
+  font-size: 2rem;
+}
+
+.container img {
+  width: 75%;
+}
