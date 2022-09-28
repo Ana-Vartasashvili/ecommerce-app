@@ -39,6 +39,20 @@
 
 .cartIcon {
   cursor: pointer;
+  position: relative;
+}
+
+.numCartItems {
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #010101;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 2rem;
 }
 
 @media (max-width: 63rem) {

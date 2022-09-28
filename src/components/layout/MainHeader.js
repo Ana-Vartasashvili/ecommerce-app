@@ -2,12 +2,14 @@ import { menubarActions } from '../../store/menubar-slice'
 import { cartActions } from '../../store/cart-slice'
 import SidebarIcon from '../icons/SidebarIcon'
 import classes from './MainHeader.module.css'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CartIcon from '../icons/CartIcon'
 import { Link } from 'react-router-dom'
 
 const MainHeader = (props) => {
   const dispatch = useDispatch()
+  const numCartItems = useSelector((state) => state.products.cartItems.length)
+
   const showSidebarHandler = () => {
     dispatch(menubarActions.toggle())
   }
@@ -34,6 +36,9 @@ const MainHeader = (props) => {
 
         <div className={classes.cartIcon} onClick={cartShowHandler}>
           <CartIcon />
+          <div className={classes.numCartItems}>
+            <span>{numCartItems}</span>
+          </div>
         </div>
       </nav>
     </header>
