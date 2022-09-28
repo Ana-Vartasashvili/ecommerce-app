@@ -12,6 +12,10 @@
   animation: scale-up-hor-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+.closeCart {
+  animation: scale-out-hor-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
 .headerContainer {
   display: flex;
   align-items: center;
@@ -116,12 +120,25 @@
 
 @media (max-width: 28.12rem) {
   .cart {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+
+  .amount {
+    font-size: 1.3rem;
   }
 
   .icon {
     width: 3.2rem;
     height: 3.2rem;
+  }
+}
+
+@keyframes scale-down-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.7);
   }
 }
 
@@ -136,12 +153,16 @@
   }
 }
 
-@keyframes scale-down-center {
+@keyframes scale-out-hor-right {
   0% {
-    transform: scale(1);
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+    opacity: 1;
   }
   100% {
-    transform: scale(0.7);
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
   }
 }
 

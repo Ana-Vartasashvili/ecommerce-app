@@ -6,9 +6,12 @@ import classes from './Cart.module.css'
 import Overlay from '../../UI/Overlay'
 import CartItem from './CartItem'
 import { useEffect } from 'react'
+import { useState } from 'react'
 
 const Cart = () => {
   const dispatch = useDispatch()
+  const [closeCart, setCloseCart] = useState(false)
+
   const cartItems = useSelector((state) => state.products.cartItems)
   const cart = useSelector((state) => state.products)
 
@@ -17,12 +20,15 @@ const Cart = () => {
   }, [cart, dispatch])
 
   const closeCartHandler = () => {
-    dispatch(cartActions.toggle())
+    setCloseCart(true)
+    setTimeout(() => {
+      dispatch(cartActions.toggle())
+    }, 500)
   }
 
   return (
     <>
-      <div className={classes.cart}>
+      <div className={`${classes.cart} ${closeCart && classes.closeCart}`}>
         <div className={classes.headerContainer}>
           <div className={classes.text}>
             <p className={classes.title}>Your Order</p>
