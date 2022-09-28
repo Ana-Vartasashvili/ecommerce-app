@@ -61,12 +61,12 @@
 }
 
 .aboutBtn {
-  border: solid 1.7px #010101;
+  border: solid 1.4px #010101;
   color: #010101;
 }
 
 .shopBtn {
-  border: solid 1.7px #010101;
+  border: solid 1.4px #010101;
   background-color: #982bfe;
   color: #fff2e6;
 }
@@ -74,7 +74,7 @@
 .heroImg {
   width: 35vw;
   height: 32.7vw;
-  border: solid 1.6px #010101;
+  border: solid 1.4px #010101;
 }
 
 .hero img {

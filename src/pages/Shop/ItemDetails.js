@@ -1,9 +1,12 @@
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import classes from './ItemDetails.module.css'
 import { useState } from 'react'
+import { ProductsActions } from '../../store/products-slice'
+import { cartActions } from '../../store/cart-slice'
 
 const ItemDetails = (props) => {
+  const dispatch = useDispatch()
   const { id } = useParams()
 
   const [itemQuantity, setItemQuantity] = useState(1)
@@ -20,6 +23,17 @@ const ItemDetails = (props) => {
 
   const decreaseQuantityHandler = () => {
     itemQuantity > 1 && setItemQuantity((prev) => prev - 1)
+  }
+
+  const addItemToCartHandler = () => {
+    dispatch(
+      ProductsActions.addItemToCart({
+        id: currentItem.id,
+        itemQuantity: itemQuantity,
+      })
+    )
+    dispatch(cartActions.toggle())
+    setItemQuantity(1)
   }
 
   return (
@@ -42,7 +56,12 @@ const ItemDetails = (props) => {
                 <span>{itemQuantity}</span>
                 <button onClick={increaseQuantityHandler}>+</button>
               </div>
-              <button className={classes.addToCartBtn}>Add to cart</button>
+              <button
+                className={classes.addToCartBtn}
+                onClick={addItemToCartHandler}
+              >
+                Add to cart
+              </button>
             </div>
 
             <div className={classes.description}>{currentItem.description}</div>

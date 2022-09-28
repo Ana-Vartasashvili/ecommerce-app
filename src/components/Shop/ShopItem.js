@@ -8,7 +8,7 @@ const ShopItem = (props) => {
   const dispatch = useDispatch()
   const id = props.id
   const addItemToCartHandler = () => {
-    dispatch(ProductsActions.addItemToCart(id))
+    dispatch(ProductsActions.addItemToCart({ id }))
     dispatch(cartActions.toggle())
   }
 
