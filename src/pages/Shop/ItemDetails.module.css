@@ -53,6 +53,7 @@
 
 .addToCartBtn:hover {
   background-color: #f26805;
+  border-radius: 40px;
 }
 
 .flex {

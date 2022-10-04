@@ -14,6 +14,11 @@
   left: 0;
 }
 
+.header a:link,
+.header a:visited {
+  color: #010101;
+}
+
 .header nav {
   display: flex;
   justify-content: space-between;
