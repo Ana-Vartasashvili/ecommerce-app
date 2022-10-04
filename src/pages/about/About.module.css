@@ -1,0 +1,36 @@
+.container {
+  width: 85vw;
+  margin: 7rem auto;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: auto auto;
+  row-gap: 12rem;
+}
+
+.container img {
+  width: 75%;
+}
+
+.text {
+  font-size: 1.2vw;
+  line-height: 1.7;
+  width: 70%;
+}
+
+@media (max-width: 63rem) {
+  .container {
+    width: 90vw;
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+  }
+
+  .replaceItem {
+    order: 4;
+  }
+
+  .text {
+    margin-bottom: 4rem;
+    font-size: 1.3rem;
+  }
+}

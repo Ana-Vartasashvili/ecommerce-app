@@ -1,4 +1,4 @@
-import heroImg from '../../../images/hero-image.jpg'
+import heroImg from '../../images/hero-image.jpg'
 import classes from './Welcome.module.css'
 import { Link } from 'react-router-dom'
 import TextScroll from './TextScroll'

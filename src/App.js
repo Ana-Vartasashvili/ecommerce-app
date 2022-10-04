@@ -1,11 +1,12 @@
 import { ProductsActions } from '../src/store/products-slice'
 import { Route, Routes, Navigate } from 'react-router-dom'
-import Welcome from './pages/Welcome/Welcome/Welcome'
+import Welcome from './pages/Welcome/Welcome'
 import { useDispatch } from 'react-redux'
 import Shop from './pages/Shop/Shop'
 import { useEffect } from 'react'
 import Header from './UI/Header'
 import ItemDetails from './pages/Shop/ItemDetails'
+import About from '../src/pages/about/About'
 
 function App() {
   const dispatch = useDispatch()
@@ -35,7 +36,7 @@ function App() {
 
         <Route path="/shop/:id" element={<ItemDetails />}></Route>
 
-        <Route path="/about"></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
     </Header>
   )
