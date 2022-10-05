@@ -19,7 +19,9 @@ const ShopItem = (props) => {
           <img src={props.image} alt="corn snack with chilli flavour" />
         </Link>
       </div>
-      <h2>{props.title}</h2>
+      <Link to={`${id}`}>
+        <h2>{props.title}</h2>
+      </Link>
       <p>{`$${props.price.toFixed(2)}`}</p>
       <button className={classes.btn} onClick={addItemToCartHandler}>
         Add to cart

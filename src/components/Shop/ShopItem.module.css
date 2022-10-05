@@ -41,7 +41,12 @@
 .productItem h2 {
   text-align: center;
   font-size: 2rem;
+  color: #010101;
   margin-bottom: 0.8rem;
+}
+
+.productItem a {
+  text-decoration: none;
 }
 
 .productItem p {
