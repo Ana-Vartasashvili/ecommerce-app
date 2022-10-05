@@ -8,6 +8,7 @@ import Footer from '../components/footer/Footer'
 const Header = (props) => {
   const sidebarIsShown = useSelector((state) => state.menubar.isShown)
   const cartIsShown = useSelector((state) => state.cart.isShown)
+  const shopItems = useSelector((state) => state.products.items)
 
   return (
     <>
@@ -15,7 +16,7 @@ const Header = (props) => {
       {cartIsShown && <Cart />}
       <MainHeader />
       <main>{props.children}</main>
-      <Footer />
+      {shopItems.length > 0 && <Footer />}
     </>
   )
 }

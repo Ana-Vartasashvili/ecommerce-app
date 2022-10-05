@@ -31,8 +31,8 @@ const Welcome = () => {
             <img src={heroImg} alt="corn flakes with different flavours" />
           </div>
         </div>
+        <TextScroll />
       </section>
-      <TextScroll />
     </>
   )
 }
