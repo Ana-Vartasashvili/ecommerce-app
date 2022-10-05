@@ -4,6 +4,7 @@ import ItemDetails from './pages/Shop/ItemDetails'
 import Welcome from './pages/Welcome/Welcome'
 import About from '../src/pages/about/About'
 import { useEffect } from 'react'
+import NotFound from './pages/notFound/NotFound'
 import { useDispatch } from 'react-redux'
 import Shop from './pages/Shop/Shop'
 import Card from './UI/Card'
@@ -37,6 +38,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:id" element={<ItemDetails />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </Card>
   )

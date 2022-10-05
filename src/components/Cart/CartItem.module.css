@@ -72,8 +72,8 @@
 }
 
 .removeIcon {
-  width: 1.4vw;
-  height: 1.4vw;
+  width: 1.5vw;
+  height: 1.5vw;
 }
 
 @media (max-width: 75rem) {
@@ -98,7 +98,11 @@
 @media (max-width: 50rem) {
   .cartItem {
     height: 28vw;
-    font-size: 3vw;
+    font-size: 3.3vw;
+  }
+
+  .cartItem img {
+    margin-right: 1rem;
   }
 
   .text {
@@ -106,28 +110,28 @@
   }
 
   .quantity {
-    font-size: 2.6vw;
+    font-size: 3.2vw;
     gap: 2vw;
   }
 
   .quantity button {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .removeBtn {
-    font-size: 2.4vw;
+    font-size: 2.8vw;
     gap: 0.4vw;
   }
 
   .removeIcon {
-    width: 3.3vw;
-    height: 3.3vw;
+    width: 3.8vw;
+    height: 3.8vw;
   }
 }
 
 @media (max-width: 35rem) {
   .cartItem {
-    height: 17vh;
+    height: 23vh;
     font-size: 2rem;
   }
 
