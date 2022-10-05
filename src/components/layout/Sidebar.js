@@ -1,5 +1,5 @@
 import { menubarActions } from '../../store/menubar-slice'
-import CloseIcon from '../icons/CloseIcon'
+import CloseIcon from '../../icons/CloseIcon'
 import classes from './Sidebar.module.css'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'

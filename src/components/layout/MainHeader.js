@@ -1,9 +1,9 @@
 import { menubarActions } from '../../store/menubar-slice'
 import { cartActions } from '../../store/cart-slice'
-import SidebarIcon from '../icons/SidebarIcon'
+import SidebarIcon from '../../icons/SidebarIcon'
 import classes from './MainHeader.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import CartIcon from '../icons/CartIcon'
+import CartIcon from '../../icons/CartIcon'
 import { Link } from 'react-router-dom'
 
 const MainHeader = (props) => {

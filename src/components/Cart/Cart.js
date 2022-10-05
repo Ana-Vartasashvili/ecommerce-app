@@ -1,7 +1,7 @@
 import { ProductsActions } from '../../store/products-slice'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../../store/cart-slice'
-import CloseIcon from '../icons/CloseIcon'
+import CloseIcon from '../../icons/CloseIcon'
 import classes from './Cart.module.css'
 import Overlay from '../../UI/Overlay'
 import CartItem from './CartItem'

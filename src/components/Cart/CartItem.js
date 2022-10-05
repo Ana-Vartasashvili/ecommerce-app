@@ -1,6 +1,6 @@
 import { ProductsActions } from '../../store/products-slice'
 import classes from './CartItem.module.css'
-import CloseIcon from '../icons/CloseIcon'
+import CloseIcon from '../../icons/CloseIcon'
 import { useDispatch } from 'react-redux'
 
 const CartItem = (props) => {

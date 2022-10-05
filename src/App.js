@@ -6,7 +6,7 @@ import About from '../src/pages/about/About'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import Shop from './pages/Shop/Shop'
-import Header from './UI/Header'
+import Card from './UI/Card'
 
 function App() {
   const dispatch = useDispatch()
@@ -32,7 +32,7 @@ function App() {
   }, [dispatch])
 
   return (
-    <Header>
+    <Card>
       <Routes>
         <Route path="/" element={<Navigate replace to="/welcome" />} />
         <Route path="/welcome" element={<Welcome />} />
@@ -40,7 +40,7 @@ function App() {
         <Route path="/shop/:id" element={<ItemDetails />}></Route>
         <Route path="/about" element={<About />}></Route>
       </Routes>
-    </Header>
+    </Card>
   )
 }
 
