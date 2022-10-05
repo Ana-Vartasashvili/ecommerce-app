@@ -68,6 +68,12 @@ const ItemDetails = (props) => {
           </div>
         </div>
       )}
+
+      {!currentItem && (
+        <div className={classes.error}>
+          <p>Couldn't find item</p>
+        </div>
+      )}
     </>
   )
 }

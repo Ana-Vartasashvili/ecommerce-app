@@ -1,4 +1,4 @@
-.text {
+.error {
   display: inline-block;
   text-align: center;
   padding-top: 20rem;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 28rem) {
-  .text {
+  .error {
     padding-top: 15rem;
     font-size: 2rem;
   }
