@@ -58,7 +58,7 @@
 }
 
 .cartItems {
-  max-height: 60%;
+  max-height: 72%;
   height: fit-content;
   width: auto;
   display: flex;
