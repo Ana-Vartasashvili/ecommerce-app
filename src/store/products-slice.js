@@ -5,6 +5,7 @@ const initialState = {
   cartItems: [],
   totalPrice: 0,
   totalQuantity: 0,
+  error: null,
 }
 
 const ProductsSlice = createSlice({
@@ -81,6 +82,9 @@ const ProductsSlice = createSlice({
       )
       state.totalPrice = totalAmount
       state.totalQuantity = totalQuantity
+    },
+    setError(state, action) {
+      state.error = action.payload
     },
   },
 })

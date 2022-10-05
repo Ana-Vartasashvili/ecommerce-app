@@ -3,15 +3,13 @@ import { Route, Routes, Navigate } from 'react-router-dom'
 import ItemDetails from './pages/Shop/ItemDetails'
 import Welcome from './pages/Welcome/Welcome'
 import About from '../src/pages/about/About'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import Shop from './pages/Shop/Shop'
 import Card from './UI/Card'
 
 function App() {
   const dispatch = useDispatch()
-
-  const [errorMessage, setErrorMessage] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +23,7 @@ function App() {
 
         dispatch(ProductsActions.addProductData(data))
       } catch (error) {
-        setErrorMessage(error.message)
+        dispatch(ProductsActions.setError(error.message))
       }
     }
     fetchData()
