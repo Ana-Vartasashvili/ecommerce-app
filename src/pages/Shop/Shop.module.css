@@ -1,11 +1,16 @@
-.error {
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.text {
   font-size: 2rem;
   text-align: center;
   margin-top: 15rem;
 }
 
 @media (max-width: 25rem) {
-  .error {
+  .text {
     font-size: 1.5rem;
     padding: 0 2rem;
   }
