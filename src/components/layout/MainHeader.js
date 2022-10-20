@@ -31,7 +31,7 @@ const MainHeader = (props) => {
         </div>
 
         <Link to="/welcome" className={classes.logo}>
-          LOGO
+          HOME
         </Link>
 
         <div className={classes.cartIcon} onClick={cartShowHandler}>

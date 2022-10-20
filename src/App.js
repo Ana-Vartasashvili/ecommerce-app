@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(process.env.REACT_APP_API_BASE_URI)
+        const response = await fetch('https://products-api-one.vercel.app')
         if (!response.ok) {
           throw new Error('Failed to load products.')
         }
